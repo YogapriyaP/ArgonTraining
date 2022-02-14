@@ -1,0 +1,13 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-autocomplete #autocomplete="matAutocomplete">
+  <mat-option *ngFor="let state of states" [value]="state.code">{{ state.name }}</mat-option>
+</mat-autocomplete>
+
+<input id="plain" [matAutocomplete]="autocomplete">
+<input id="disabled" disabled [matAutocomplete]="autocomplete">
+
+<button mat-raised-button [color]="color">
+
+   Button
+</button>
+<mat-icon color="red">favorite</mat-icon>
